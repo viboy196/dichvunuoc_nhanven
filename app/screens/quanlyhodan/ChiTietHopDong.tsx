@@ -11,7 +11,7 @@ import {WaterUser} from '../../utils/api/apiTypes';
 import {useAppSelector} from '../../redux/store/hooks';
 import TakePickture, {ImageItem} from '../../components/TakePicture';
 import {RootStackScreenProps} from '../../navigation/types';
-import fs from 'react-native-fs';
+// import fs from 'react-native-fs';
 export default function ChiTietHopDong({
   route,
 }: RootStackScreenProps<'ChiTietHopDong'>) {
@@ -67,7 +67,7 @@ export default function ChiTietHopDong({
   //       require(`http://lamviec.dichvunuoc.vn/Resource/${url}`),
   //       'base64',
   //     );
-  
+
   //   });
   // });
   const [ListUnitType, setListUnitType] = useState<Array<any>>();
@@ -112,9 +112,11 @@ export default function ChiTietHopDong({
     setLoading(true);
     let notificationMethodTypeCheckerStr = '';
     for (const variable in notificationMethodTypeChecker) {
+      // @ts-ignore
       if (notificationMethodTypeChecker[variable] == true) {
         notificationMethodTypeCheckerStr = `${variable};${notificationMethodTypeCheckerStr}`;
       } else {
+        // @ts-ignore
         console.log(variable, notificationMethodTypeChecker[variable]);
       }
     }
@@ -124,9 +126,11 @@ export default function ChiTietHopDong({
     );
     let paymentMethodCheckerStr = '';
     for (const variable in paymentMethodChecker) {
+      // @ts-ignore
       if (paymentMethodChecker[variable] == true) {
         paymentMethodCheckerStr = `${variable};${paymentMethodCheckerStr}`;
       } else {
+        // @ts-ignore
         console.log(variable, paymentMethodChecker[variable]);
       }
     }

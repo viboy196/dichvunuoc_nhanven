@@ -1,6 +1,6 @@
 import {View, Text} from '../../components/Themed';
 import React, {useState, useEffect} from 'react';
-import {StyleSheet} from 'react-native';
+import {Alert, StyleSheet} from 'react-native';
 import {tintColorLight} from '../../constants/Colors';
 import {useAppDispatch, useAppSelector} from '../../redux/store/hooks';
 import ApiRequest from '../../utils/api/Main/ApiRequest';
@@ -110,10 +110,7 @@ export default function TabOneScreen({
             workName={'Yêu cầu'}
             image={require('../../assets/images/search/blur.png')}
             onPress={() => {
-              navigation.navigate('CameraWaterScreen', {
-                waterUserId: undefined,
-                waterUserName: undefined,
-              });
+              Alert.alert('Thông báo', 'tính năng đang phát triển');
             }}
           />
           <WorkItem
